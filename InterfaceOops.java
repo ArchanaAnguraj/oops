@@ -2,114 +2,115 @@ package ONLINEVDOS;
 import java.util.Scanner;
 //Interface is used to achieve "abstraction" and also used to "standardization".
 
-//interface Caluculator           //Rule 1-->An interface is like a contract that,when we implemented its helps to achieve standardization
-//{                                
-//	                          
-//	public abstract void add();//--->//Rule 2--> Methods inside the interface ,automatically public and abstract are given by JVM  before method .
-//	abstract void sub();       //--- we should give only abstract methods inside the interface 
-//}
-//
-//class Mycalc1 implements  Caluculator 
-//{                                              
-//	@Override
-//	
-//	public void add(){               
-//	 System.out.println(100+200);	          
-//	}
-//	@Override
-//	public void sub(){
-//		System.out.println(100-200);	
-//	}
-//}
-//class Mycalc2 implements  Caluculator
-//{
-//	@Override
-//	public void add(){
-//		int a=20;
-//		int b=70;
-//		System.out.println(a+b);
-//	}
-//	@Override
-//	public void sub(){
-//		int a=70;
-//		int b=80;
-//		System.out.println(a-b);	
-//	}
-//	void mul()
-//	{
-//		int a=70;
-//		int b=80;
-//		System.out.println(a*b);	
-//	}
-//}
-//class Mycalc3 implements  Caluculator
-//{
-//	@Override
-//	public void add(){
-//		Scanner sc=new Scanner(System.in);
-//		int a=sc.nextInt();
-//		int b=sc.nextInt();
-//		if(a>b)
-//			System.out.println(a+b);
-//		else
-//			System.out.println("Invaild");
-//	}
-//	@Override
-//	public void sub(){
-//		Scanner sc=new Scanner(System.in);
-//		int a=sc.nextInt();
-//		int b=sc.nextInt();
-//		if(a==0||b==0) {
-//			System.out.println("Invalid");
-//		}
-//		else {
-//		  System.out.println(a-b);
-//		}
-//	}
-//	public void mul()
-//	{
-//		Scanner sc=new Scanner(System.in);
-//		int a=sc.nextInt();
-//		int b=sc.nextInt();
-//		if(a==0||b==0) {
-//			System.out.println("Invalid");
-//		}
-//		else {
-//		  System.out.println(a*b);
-//		}
-//		
-//	}
-//}
-//class maths
-//{
-//	void calc(Caluculator ref)
-//	{
-//		ref.add();                       //Rule 3-->Interface promote polymorpshim by using Interface ref - child object.
-//		ref.sub();                           //this achieving loose coupling ,,code flexibility,reduce code.
-//	}
-//}
-//
-//public class InterfaceOops {
-//
-//	public static void main(String[] args) {
-//		 Mycalc1 m1=new  Mycalc1();
-//		 Mycalc2 m2=new  Mycalc2();        
-//		 Mycalc3 m3=new  Mycalc3();      
-//		 maths m= new maths();
-//		 Caluculator ref;                 
-//		 ref=m1;
-//		 ((Mycalc3)(ref)).mul();   //--- Rule 4-->Specialized method cannot access directly by using interface object,but indirectly
-//		                                       //we can access the method by using downcasting (child object).
-//		 m1.add();
-//		 m1.sub();
-//		 m2.add();
-//		 m2.sub();
-//		 m3.add();
-//		 m3.sub();
+Example 1:
+interface Caluculator           //Rule 1-->An interface is like a contract that,when we implemented its helps to achieve standardization
+{                                
+	                          
+	public abstract void add();//--->//Rule 2--> Methods inside the interface ,automatically public and abstract are given by JVM  before method .
+	abstract void sub();       //--- we should give only abstract methods inside the interface 
+}
 
-	//}
+class Mycalc1 implements  Caluculator 
+{                                              
+	@Override
+	
+	public void add(){               
+	 System.out.println(100+200);	          
+	}
+	@Override
+	public void sub(){
+		System.out.println(100-200);	
+	}
+}
+class Mycalc2 implements  Caluculator
+{
+	@Override
+	public void add(){
+		int a=20;
+		int b=70;
+		System.out.println(a+b);
+	}
+	@Override
+	public void sub(){
+		int a=70;
+		int b=80;
+		System.out.println(a-b);	
+	}
+	void mul()
+	{
+		int a=70;
+		int b=80;
+		System.out.println(a*b);	
+	}
+}
+class Mycalc3 implements  Caluculator
+{
+	@Override
+	public void add(){
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		if(a>b)
+			System.out.println(a+b);
+		else
+			System.out.println("Invaild");
+	}
+	@Override
+	public void sub(){
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		if(a==0||b==0) {
+			System.out.println("Invalid");
+		}
+		else {
+		  System.out.println(a-b);
+		}
+	}
+	public void mul()
+	{
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		if(a==0||b==0) {
+			System.out.println("Invalid");
+		}
+		else {
+		  System.out.println(a*b);
+		}
+		
+	}
+}
+class maths
+{
+	void calc(Caluculator ref)
+	{
+		ref.add();                       //Rule 3-->Interface promote polymorpshim by using Interface ref - child object.
+		ref.sub();                           //this achieving loose coupling ,,code flexibility,reduce code.
+	}
+}
 
-//}
+public class InterfaceOops {
+
+	public static void main(String[] args) {
+		 Mycalc1 m1=new  Mycalc1();
+		 Mycalc2 m2=new  Mycalc2();        
+		 Mycalc3 m3=new  Mycalc3();      
+		 maths m= new maths();
+		 Caluculator ref;                 
+		 ref=m1;
+		 ((Mycalc3)(ref)).mul();   //--- Rule 4-->Specialized method cannot access directly by using interface object,but indirectly
+		                                       //we can access the method by using downcasting (child object).
+		 m1.add();
+		 m1.sub();
+		 m2.add();
+		 m2.sub();
+		 m3.add();
+		 m3.sub();
+
+	}
+
+}
 
 //------------------------//
 
@@ -120,14 +121,14 @@ interface Caluculator1
 	abstract void sub(); 
 }
 
-//class Mycalc implements  Caluculator1  //Rule5-->if class partially implements interface,if must declare as abstract.
-//{
-//	@Override
-//	public void add() {                 
-//		System.out.println(100+200);
-//		
-//	}
-//}
+class Mycalc implements  Caluculator1  //Rule5-->if class partially implements interface,if must declare as abstract.
+{
+	@Override
+	public void add() {                 
+		System.out.println(100+200);
+		
+	}
+}
 //------------------------//
 
 interface Caluculator12
@@ -163,30 +164,30 @@ class mycalculator implements Caluculator12,Caluculator2 //Rule6-->We can achiev
 }
 //-----------------------------------------------//
 
-//interface Caluculator21
-//{
-//	 void add();                                 //Rule7-->one interface can not implements another interface but we can "extends"..
-//}                                                         //why because interface can not provide methods inside the body..
-//interface Caluculator23 implements Caluculator21 //wrong
-//{
-//	
-//}
-//interface Caluculator22 extends Caluculator21 //correct
-//{
-//	void sub();
-//}
-//class  Caluculator24 implements Caluculator21
-//{
-//	@Override
-//	public void add() {
-//		// TODO Auto-generated method stub
-//		
-//	}
-//	private void sub() {
-//		// TODO Auto-generated method stub
-//
-//	}
-//}
+interface Caluculator21
+{
+	 void add();                                 //Rule7-->one interface can not implements another interface but we can "extends"..
+}                                                         //why because interface can not provide methods inside the body..
+interface Caluculator23 implements Caluculator21 //wrong
+{
+	
+}
+interface Caluculator22 extends Caluculator21 //correct
+{
+	void sub();
+}
+class  Caluculator24 implements Caluculator21
+{
+	@Override
+	public void add() {
+		// TODO Auto-generated method stub
+		
+	}
+	private void sub() {
+		// TODO Auto-generated method stub
+
+	}
+}
 //------------------------//
 interface Caluculator31
 {
@@ -289,22 +290,22 @@ interface calculator123
 	                //Rule10:--An interface contains variables and methods signatures ..its automatticaly attach public,static,final..
 }
 
-//class Tap implements calculator123            
-//{
-//	void disp()
-//	{
-//		count=8;            //we cant change the value coming frome interface because its final its invisible \..
-//		System.out.println(count);
-//	}
-//}
-//public class InterfaceOops {
-//	public static void main(String[] args) {
-////		Tap t=new Tap();
-////		t.disp();
-//		System.out.println(Tap.count);       
-//		
-	//}
-//}
+class Tap implements calculator123            
+{
+	void disp()
+	{
+		count=8;            //we cant change the value coming frome interface because its final its invisible \..
+		System.out.println(count);
+	}
+}
+public class InterfaceOops {
+	public static void main(String[] args) {
+		Tap t=new Tap();
+		t.disp();
+		System.out.println(Tap.count);       
+		
+	}
+}
 //---------------------------------//
 interface calculator1231
 {
@@ -334,28 +335,28 @@ interface demo123
 
 //Serializable   -->EX for "marker interface"
 
-//-----------------//
+//---------------------------------------------------------------------//
 
-//interface Tap1S
-//{
-//	void add();
-//}
-//public class InterfaceOops {
-//	public static void main(String[] args) {
-//		Tap1 t;//Rule 12:we cant create obejct for interfacee but we can craete reference..
-//		
-//	}
-//}
+interface Tap1S
+{
+	void add();
+}
+public class InterfaceOops {
+	public static void main(String[] args) {
+		Tap1 t;//Rule 12:we cant create obejct for interfacee but we can craete reference..
+		
+	}
+}
 //-----------------------------------------------------------------//
 
-//interface demo
-//{
-//	void disp1();
-//	default void disp2()            //we gan give method body inside the interface by using default...
-//	{
-//		System.out.println("tap");
-//	}
-//}
+interface demo
+{
+	void disp1();
+	default void disp2()            //we gan give method body inside the interface by using default...
+	{
+		System.out.println("tap");
+	}
+}
 
 //example
 interface SeaAnimalls
@@ -397,20 +398,20 @@ class Dolphin implements SeaAnimalls{
 	
 }
 
-//public class InterfaceOops {
-//	public static void main(String[] args) {
-//		Shark s=new Shark();
-//		Dolphin d=new Dolphin();
-//		s.eat();
-//		s.swim();
-//		s.communicate();
-//		d.eat();
-//		d.swim();
-//		d.communicate();
-//		System.out.println(d.toString());
-//	}
-//	}
-//-------------------//
+public class InterfaceOops {
+	public static void main(String[] args) {
+		Shark s=new Shark();
+		Dolphin d=new Dolphin();
+		s.eat();
+		s.swim();
+		s.communicate();
+		d.eat();
+		d.swim();
+		d.communicate();
+		System.out.println(d.toString());
+	}
+	}
+//---------------------------------------------------------//
 interface demo9S
 {
 	static void disp()                     //if we want access the content directly inside interface we can use static..
@@ -422,13 +423,13 @@ class dem078 implements demo9S
 {
 	
 }
-//public class InterfaceOops {
-//	public static void main(String[] args) {
-//		//demo9S d;  --error
-//		demo9S.disp();
-//		//dem078.disp(); //--error              //static method will never inherited and override..
-//	}
-//}
+public class InterfaceOops {
+	public static void main(String[] args) {
+		//demo9S d;  --error
+		demo9S.disp();
+		//dem078.disp(); //--error              //static method will never inherited and override..
+	}
+}
 
 //----------------------------------------------------------------//
 interface Student12
