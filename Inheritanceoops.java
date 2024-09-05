@@ -1,269 +1,278 @@
 package ONLINEVDOS;
-//class parent1000{
-//	String color="Brown";
-//	int height=5;
-//	void dis() {
-//	System.out.print(color);                                 //what is Inheritance?
-//	System.out.print(color);                                 //Inheritance the process of acquiring properties and behavior of a class to another class.
-//}
-//}
-//class child1000 extends parent1000{
-//	
-//}
-//public class Inheritanceoops {
-//	public static void main(String[] args) {
-//		child1000 c=new child1000();
-//		c.dis();}
-//}
+class parent1000{
+	String color="Brown";
+	int height=5;
+	void dis() {
+	System.out.print(color);                                 //what is Inheritance?
+	System.out.print(color);                                 //Inheritance the process of acquiring properties and behavior of a class to another class.
+}
+}
+class child1000 extends parent1000{
+	
+}
+public class Inheritanceoops {
+	public static void main(String[] args) {
+		child1000 c=new child1000();
+		c.dis();}
+}
 //-------------------------------------------------//
 
-//class Parent1000
-//{
-//	float h=5.2f;
-//	void disp()
-//	{
-//		System.out.println("My parents are Indian");         //Types of Inheritance
-//	}	                                                     //Single level
-//}
-//class child1000 extends Parent1000
-//{
-//	
-//}
-//public class Inheritanceoops {
-//	public static void main(String[] args) {
-//		child1000 c=new child1000();
-//		c.disp();
-//		System.out.println(c.h);
-//}
-//}
-//-------------------------------------------------//
 
-//class grantParent1000{
-//	float h=5.2f;
-//	void disp()
-//	{
-//		System.out.println("My parents are Indian");         //Types of Inheritance
-//	}	                                                     //Multi-level
-//}
-//class Parent1000 extends grantParent1000{
-//	
-//}
-//class child1000 extends Parent1000{
-//	
-//}
-//public class Inheritanceoops {
-//	public static void main(String[] args) {
-//		child1000 c=new child1000();
-//		c.disp();
-//		System.out.println(c.h);
-//}
-//}
+//Types of Inheritance
+//1.Single level
+class Parent1000
+{
+	float h=5.2f;
+	void disp()
+	{
+		System.out.println("My parents are Indian");  
+	}
+}
+class child1000 extends Parent1000
+{
+	
+}
+public class Inheritanceoops {
+	public static void main(String[] args) {
+		child1000 c=new child1000();
+		c.disp();
+		System.out.println(c.h);
+}
+}
+//-------------------------------------------------//
+//2Multi-level
+class grantParent1000{
+	float h=5.2f;
+	void disp()
+	{
+		System.out.println("My parents are Indian");       
+	}	                                                     
+}
+class Parent1000 extends grantParent1000{
+	
+}
+class child1000 extends Parent1000{
+	
+}
+public class Inheritanceoops {
+	public static void main(String[] args) {
+		child1000 c=new child1000();
+		c.disp();
+		System.out.println(c.h);
+}
+}
 //--------------------------------------------------//
-
-//class parent
-//{
-//	String s="python";
-//	int n=100;
-//	 void demo()
-//	 {
-//		 System.out.println("python is a easy language");
-//	 }                                                           //Types of Inheritance
-//}                                                              //hirarical-level}
-//class child1 extends parent{
-//	
-//}
-//class child2 extends parent{
-//	
-//}
-//class child3 extends parent{
-//	
-//}
-//public class Inheritanceoops {
-//   public static void main(String[]args) 
-//   {
-//	   child1 c1 = new child1();
-//	   child2 c2 = new child2();
-//	   child3 c3 = new child3();
-//	   System.out.println(c1.s);
-//	   c1.demo();
-//	   System.out.println();
-//	   System.out.println(c2.s);
-//	   c2.demo();
-//	   System.out.println();
-//	   System.out.println(c3.n);
-//	   c3.demo();
-//	  }
-//}
+//3.hirarical-level
+class parent
+{
+	String s="python";
+	int n=100;
+	 void demo()
+	 {
+		 System.out.println("python is a easy language");
+	 }                                                           
+}                                                            
+class child1 extends parent{
+	
+}
+class child2 extends parent{
+	
+}
+class child3 extends parent{
+	
+}
+public class Inheritanceoops {
+  public static void main(String[]args) 
+  {
+	   child1 c1 = new child1();
+	   child2 c2 = new child2();
+	   child3 c3 = new child3();
+	   System.out.println(c1.s);
+	   c1.demo();
+	   System.out.println();
+	   System.out.println(c2.s);
+	   c2.demo();
+	   System.out.println();
+	   System.out.println(c3.n);
+	   c3.demo();
+	  }
+}
 
 //----------------------------------------------------//
 
-//class Grantparent12
-//{
-//	String s="python";
-//	int n=100;
-//	 void demo()
-//	 {
-//		 System.out.println("python is a easy language");
-//	 }                                                           //Types of Inheritance
-//}                                                               
-//hibrid-level---combination of 2 or more inheritance
-//class parent extends Grantparent12
-//{
-//	                                                 
-//}
-//class child1 extends parent{
-//	
-//}
-//class child2 extends parent{
-//	
-//}
-//class child3 extends parent{
-//	
-//}
-//public class Inheritanceoops {
-//   public static void main(String[]args) 
-//   {
-//	   child1 c1 = new child1();
-//	   child2 c2 = new child2();
-//	   child3 c3 = new child3();
-//	   System.out.println(c1.s);
-//	   c1.demo();
-//	   System.out.println();
-//	   System.out.println(c2.s);
-//	   c2.demo();
-//	   System.out.println();
-//	   System.out.println(c3.n);
-//	   c3.demo();
-//	  }
-//}
+//4.hibrid-level---combination of 2 or more inheritance
+
+class Grantparent12
+{
+	String s="python";
+	int n=100;
+	 void demo()
+	 {
+		 System.out.println("python is a easy language");
+	 }                                                           //Types of Inheritance
+}                                                               
+class parent extends Grantparent12
+{
+	                                                 
+}
+class child1 extends parent{
+	
+}
+class child2 extends parent{
+	
+}
+class child3 extends parent{
+	
+}
+public class Inheritanceoops {
+  public static void main(String[]args) 
+  {
+	   child1 c1 = new child1();
+	   child2 c2 = new child2();
+	   child3 c3 = new child3();
+	   System.out.println(c1.s);
+	   c1.demo();
+	   System.out.println();
+	   System.out.println(c2.s);
+	   c2.demo();
+	   System.out.println();
+	   System.out.println(c3.n);
+	   c3.demo();
+	  }
+}
 
 
 //--------------------------------------------------------------//
 
-//class Demo1 //extends object---------------that means programmer does not extends the class , JVM will extends 
-//{                                             //"object is parent of every class "
-//	int i=9;
-//}                                              //"Multiple inheritance"---//one child class is acquiring from multiple parent class does not work
-//class Demo2 //extends object
-//{
-//	int i=99;
-//}
-//class Demo3 extends Demo1,Demo2  //-----there is no multiple Inheritance and its also called "diamond path"
-//{
-//	System.out.println(i);
-//}
-//
-//-----------------------//
-//class parent extends child
-//{
-//	
-//}
-//class child extends parent        //there is no cyclic inheritance
-//{
-//	
-//}
+//5.Multiple inheritance
+class Demo1 //extends object---------------that means programmer does not extends the class , JVM will extends 
+{                                             //"object is parent of every class "
+	int i=9;
+}                                              //"Multiple inheritance"---//one child class is acquiring from multiple parent class does not work
+class Demo2 //extends object
+{
+	int i=99;
+}
+class Demo3 extends Demo1,Demo2  //-----there is no multiple Inheritance and its also called "diamond path"
+{
+	System.out.println(i);
+}
+
+
+
+//---------------------------------------------------------------------------------//
+//6.cyclic inheritance
+class parent extends child
+{
+	
+}
+class child extends parent        //there is no cyclic inheritance
+{
+	
+}
 //---------------------------------------------------------------------------//
 
 //"Constructor chaining"
-//class grandparent
-//{
-//	grandparent()
-//	{
-//		System.out.println("Inside grantparent class");
-//	}
-//}
-//class parent extends grandparent{
-//     parent()
-//     {
-//    	 System.out.println("Inside parent class");
-//     }
-//}
-//class child extends parent{
-//	child()                                                    //calling a constructor from one class to another class
-//	{
-//		//super();      -----//if programmer did not give super() java will give default   
-//		 System.out.println("Inside child class");
-//	}
-//}
-//public class Inheritanceoops {
-//     public static void main(String[]args) {
-//    	 child c=new child();
-//    }
-//}
+
+class grandparent
+{
+	grandparent()
+	{
+		System.out.println("Inside grantparent class");
+	}
+}
+class parent extends grandparent{
+    parent()
+    {
+   	 System.out.println("Inside parent class");
+    }
+}
+class child extends parent{
+	child()                                                    //calling a constructor from child class to parent class
+	{
+		//super();      -----//if programmer did not give super() java will give default   
+		 System.out.println("Inside child class");
+	}
+}
+public class Inheritanceoops {
+    public static void main(String[]args) {
+   	 child c=new child();
+   }
+}
 //-------------------------------------------------------------------//
 
 //--example
-//class Grantparent{
-//	Grantparent(){
-//		System.out.println("Inside the grantparent class");
-//	}
-//	Grantparent(float b){
-//		this();
-//		System.out.println("Inside the grantparent param 1 class");	
-//	}
-//}
-//class Parents123 extends Grantparent{
-//	Parents123(){
-//	   super(1.3f);
-//		System.out.println("Inside the parent class");
-//	}
-//	Parents123(String s){
-//	    this();
-//		System.out.println("Inside the parent param 1 class");
-//	}
-//}
-//class child extends Parents123{
-//	child(){
-//		super("TAP");
-//		System.out.println("Inside the child class");
-//     }
-//   child(int a){
-//	   this();                                               //the first statement of constructor  either super nor this
-//		 System.out.print("Inside the child class 1 param");
-//}
-//}
-//public class Inheritanceoops {
-//  public static void main(String[] args) {
-//		child c=new child(100);
-//		}
-//  }
+class Grantparent{
+	Grantparent(){
+		System.out.println("Inside the grantparent class");
+	}
+	Grantparent(float b){
+		this();
+		System.out.println("Inside the grantparent param 1 class");	
+	}
+}
+class Parents123 extends Grantparent{
+	Parents123(){
+	   super(1.3f);
+		System.out.println("Inside the parent class");
+	}
+	Parents123(String s){
+	    this();
+		System.out.println("Inside the parent param 1 class");
+	}
+}
+class child extends Parents123{
+	child(){
+		super("TAP");
+		System.out.println("Inside the child class");
+    }
+  child(int a){
+	   this();                                               //the first statement of constructor  either super nor this
+		 System.out.print("Inside the child class 1 param");
+}
+}
+public class Inheritanceoops {
+ public static void main(String[] args) {
+		child c=new child(100);
+		}
+ }
 
 //--------------------------------------------------------------------//
-//class You
-//{
-//   private int pw=8080;
-//   private int an=12345;                          // 1.   private members cannot inheritance its only support for encapsulation
-//}                    
-//class Hacker extends You
-//{
-//	void disp() {
-//	 pw=8089;
-//	 an=89766;
-//	System.out.println(pw);
-//	}
-//}
-////------//
-//class parent
-//{
-//	parent()
-//	{
-//	   System.out.println("inside parent");        //2.  constructor cannot inheritance but it will executed,,,,then how output same like?
-//	}                                                    // its not because of inheritance ,because of using super keyword
-//}
-//class child extends parent
-//{
-//	child()
-//	{
-//		//super();
-//		System.out.println("inside child");
-//	}
-//}
-//public class Inheritanceoops {
-//   public static void main(String[] args) {
-//      Hacker h=new Hacker();
-//      h.disp();
-//   }
-//}
+class Rank
+{
+  private int pw=8080;
+  private int an=12345;                          // 1.   private members cannot inheritance its only support for encapsulation
+}                    
+class Hacker extends Rank
+{
+	void disp() {
+	 pw=8089;
+	 an=89766;
+	System.out.println(pw);
+	}
+}
+////-------------------------------------------------------//
+class parent
+{
+	parent()
+	{
+	   System.out.println("inside parent");        //2.  constructor cannot inheritance but it will executed,,,,then how output same like?
+	}                                                    // its not because of inheritance ,because of using super keyword
+}
+class child extends parent
+{
+	child()
+	{
+		//super();
+		System.out.println("inside child");
+	}
+}
+public class Inheritanceoops {
+  public static void main(String[] args) {
+     Hacker h=new Hacker();
+     h.disp();
+  }
+}
 //-----------------------------------------------------------------------------------------------------------------------//
 //"Types of method in Inheritance"
 class plane{
